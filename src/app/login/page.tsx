@@ -21,11 +21,11 @@ function getLoginConfig(kind: ReturnType<typeof getProductKind>) {
   }
   if (kind === 'editorial') {
     return {
-      shell: 'bg-[#fbf6ee] text-[#241711]',
-      panel: 'border border-[#dcc8b7] bg-[#fffdfa]',
-      side: 'border border-[#e6d6c8] bg-[#fff4e8]',
-      muted: 'text-[#6e5547]',
-      action: 'bg-[#241711] text-[#fff1e2] hover:bg-[#3a241b]',
+      shell: 'bg-[#f4f5f7] text-[#1a1f2e]',
+      panel: 'border border-[#e2e6ef] bg-white',
+      side: 'border border-[#d9dee8] bg-[#f4f5f7]',
+      muted: 'text-[#6B7291]',
+      action: 'bg-[#3E85BD] text-white hover:bg-[#3576a8]',
       icon: FileText,
       title: 'Sign in to your publication workspace',
       body: 'Draft, review, and publish long-form work with the calmer reading system intact.',
