@@ -75,12 +75,6 @@ export function PressReleaseHome({ posts }: Props) {
               <ArrowRight className="h-4 w-4" />
             </Link>
             <Link
-              href="/pricing"
-              className="inline-flex items-center gap-2 rounded-full border border-white/25 bg-white/10 px-6 py-3 text-sm font-semibold text-white backdrop-blur-sm transition hover:bg-white/16"
-            >
-              View pricing
-            </Link>
-            <Link
               href={siteContent.hero.secondaryCta.href}
               className="inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-semibold text-[#e8ecf7] underline-offset-4 hover:text-white hover:underline"
             >
@@ -242,12 +236,6 @@ export function PressReleaseHome({ posts }: Props) {
               className="inline-flex items-center gap-2 rounded-full bg-[#3E85BD] px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-[#3E85BD]/25 transition hover:bg-[#3576a8]"
             >
               {siteContent.cta.primaryCta.label}
-            </Link>
-            <Link
-              href={siteContent.cta.secondaryCta.href}
-              className="inline-flex items-center gap-2 rounded-full border border-white/25 px-6 py-3 text-sm font-semibold text-white transition hover:bg-white/10"
-            >
-              {siteContent.cta.secondaryCta.label}
             </Link>
           </div>
         </div>

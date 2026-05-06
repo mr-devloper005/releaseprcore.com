@@ -11,7 +11,16 @@ import { getFactoryState } from '@/design/factory/get-factory-state'
 import { getGoogleFontsHref, getSiteFontVariables } from '@/config/site.font'
 
 export async function generateMetadata(): Promise<Metadata> {
-  return buildSiteMetadata()
+  const base = await buildSiteMetadata()
+  return {
+    ...base,
+    icons: {
+      icon: [
+        { url: '/favicon.png', type: 'image/png' },
+      ],
+      apple: '/apple-icon.png',
+    },
+  }
 }
 
 export default function RootLayout({ children }: { children: ReactNode }) {
@@ -22,6 +31,8 @@ export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
+        <link rel="icon" type="image/png" href="/favicon.png" />
+        <link rel="apple-touch-icon" href="/apple-icon.png" />
         {googleFontsHref ? <link rel="stylesheet" href={googleFontsHref} /> : null}
       </head>
       <body

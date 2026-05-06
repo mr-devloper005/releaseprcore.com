@@ -18,8 +18,7 @@ const NavbarAuthControls = dynamic(
 )
 
 const primaryLinks = [
-  { label: 'Press releases', href: '/updates' },
-  { label: 'Pricing', href: '/pricing' },
+  { label: 'Press Wire', href: '/updates' },
   { label: 'Contact', href: '/contact' },
 ]
 

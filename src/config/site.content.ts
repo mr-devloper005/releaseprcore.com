@@ -13,7 +13,7 @@ export const siteContent = {
     description:
       'Publish announcements that read well in feeds, inboxes, and syndicated surfaces—without losing the structure journalists expect.',
     primaryCta: {
-      label: 'Browse press releases',
+      label: 'Browse Press Wire',
       href: '/updates',
     },
     secondaryCta: {
@@ -29,10 +29,10 @@ export const siteContent = {
   },
   home: {
     metadata: {
-      title: 'Press releases and official announcements',
+      title: 'Press Wire and official announcements',
       description:
-        'Browse the latest press releases from releaseprCore—structured stories built for professional distribution.',
-      openGraphTitle: 'Press releases and official announcements',
+        'Browse the latest Press Wire from releaseprCore—structured stories built for professional distribution.',
+      openGraphTitle: 'Press Wire and official announcements',
       openGraphDescription:
         'National-style press distribution with clean typography, accountable metadata, and archive-friendly layouts.',
       keywords: ['press release', 'media distribution', 'announcements', 'releaseprCore', 'newsroom'],
@@ -108,7 +108,7 @@ export const taskPageMetadata: Record<Exclude<TaskKey, 'comment' | 'org' | 'soci
     description: 'Open PDFs and downloadable files.',
   },
   mediaDistribution: {
-    title: 'Press releases',
+    title: 'Press Wire',
     description: 'Search and filter official announcements and media-ready stories.',
   },
 }
@@ -128,14 +128,13 @@ export const taskIntroCopy: Record<
   comment: { title: 'Comments', paragraphs: ['Commentary and response posts.'], links: [{ label: 'Home', href: '/' }] },
   org: { title: 'Organizations', paragraphs: ['Organization pages and entities.'], links: [{ label: 'Home', href: '/' }] },
   mediaDistribution: {
-    title: 'Press release archive',
+    title: 'Press Wire archive',
     paragraphs: [
       'Scan headlines, filter by category, or jump into a full release page for complete context and media contacts.',
       'Every item keeps the same structured fields your team publishes from the dashboard—dates, authors, and categories stay aligned.',
     ],
     links: [
       { label: 'Home', href: '/' },
-      { label: 'Pricing', href: '/pricing' },
       { label: 'Contact', href: '/contact' },
     ],
   },

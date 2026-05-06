@@ -4,7 +4,7 @@ export const siteIdentity = {
   tagline: process.env.NEXT_PUBLIC_SITE_TAGLINE || 'National-grade press distribution',
   description:
     process.env.NEXT_PUBLIC_SITE_DESCRIPTION ||
-    'releaseprCore helps teams publish press releases with clear structure, professional presentation, and distribution-ready formatting.',
+    'releaseprCore helps teams publish Press Wire with clear structure, professional presentation, and distribution-ready formatting.',
   domain: process.env.NEXT_PUBLIC_SITE_DOMAIN || 'releaseprcore.com',
   url: process.env.NEXT_PUBLIC_SITE_URL || 'https://releaseprcore.com',
   ogImage: process.env.NEXT_PUBLIC_SITE_OG_IMAGE || '/og-default.png',
