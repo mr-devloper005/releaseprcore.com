@@ -96,14 +96,104 @@ export default function ContactPage() {
             </div>
           </div>
 
-          <div className={`rounded-[2rem] p-7 ${tone.panel}`}>
-            <h2 className="text-2xl font-semibold">Send a message</h2>
-            <form className="mt-6 grid gap-4">
-              <input className="h-12 rounded-xl border border-current/10 bg-transparent px-4 text-sm" placeholder="Your name" />
-              <input className="h-12 rounded-xl border border-current/10 bg-transparent px-4 text-sm" placeholder="Email address" />
-              <input className="h-12 rounded-xl border border-current/10 bg-transparent px-4 text-sm" placeholder="What do you need help with?" />
-              <textarea className="min-h-[180px] rounded-2xl border border-current/10 bg-transparent px-4 py-3 text-sm" placeholder="Share the full context so we can respond with the right next step." />
-              <button type="submit" className={`inline-flex h-12 items-center justify-center rounded-full px-6 text-sm font-semibold ${tone.action}`}>Send message</button>
+          <div className="rounded-2xl border border-[#d9dee8] bg-[#f4f5f7] p-7 shadow-[0_4px_24px_rgba(38,46,83,0.07)]">
+            <form className="grid gap-5">
+              {/* Row 1: Contact Name + Phone Number */}
+              <div className="grid gap-4 sm:grid-cols-2">
+                <div className="flex flex-col gap-1.5">
+                  <label className="text-sm font-medium text-[#1a1f2e]">
+                    Contact Name <span className="text-[#BB3426]">*</span>
+                  </label>
+                  <input
+                    type="text"
+                    required
+                    className="h-10 rounded-md border border-[#c5cbd8] bg-white px-3 text-sm text-[#1a1f2e] placeholder:text-[#9aa3bd] focus:border-[#3E85BD] focus:outline-none focus:ring-2 focus:ring-[#3E85BD]/20"
+                  />
+                </div>
+                <div className="flex flex-col gap-1.5">
+                  <label className="text-sm font-medium text-[#1a1f2e]">Phone Number</label>
+                  <input
+                    type="tel"
+                    className="h-10 rounded-md border border-[#c5cbd8] bg-white px-3 text-sm text-[#1a1f2e] placeholder:text-[#9aa3bd] focus:border-[#3E85BD] focus:outline-none focus:ring-2 focus:ring-[#3E85BD]/20"
+                  />
+                </div>
+              </div>
+
+              {/* Row 2: Email */}
+              <div className="flex flex-col gap-1.5">
+                <label className="text-sm font-medium text-[#1a1f2e]">
+                  Email <span className="text-[#BB3426]">*</span>
+                </label>
+                <input
+                  type="email"
+                  required
+                  className="h-10 rounded-md border border-[#c5cbd8] bg-white px-3 text-sm text-[#1a1f2e] placeholder:text-[#9aa3bd] focus:border-[#3E85BD] focus:outline-none focus:ring-2 focus:ring-[#3E85BD]/20"
+                />
+              </div>
+
+              {/* Helper text */}
+              <p className="text-sm text-[#6B7291]">Help Us Understand Your Needs A Little More.</p>
+
+              {/* Row 3: Organization type + Subject */}
+              <div className="grid gap-4 sm:grid-cols-2">
+                <div className="flex flex-col gap-1.5">
+                  <label className="text-sm font-medium text-[#1a1f2e]">
+                    What type of organization are you? <span className="text-[#BB3426]">*</span>
+                  </label>
+                  <select
+                    required
+                    className="h-10 rounded-md border border-[#c5cbd8] bg-white px-3 text-sm text-[#1a1f2e] focus:border-[#3E85BD] focus:outline-none focus:ring-2 focus:ring-[#3E85BD]/20"
+                  >
+                    <option value="">Please Select</option>
+                    <option value="agency">Agency / PR Firm</option>
+                    <option value="corporate">Corporate / Enterprise</option>
+                    <option value="startup">Startup</option>
+                    <option value="nonprofit">Non-Profit</option>
+                    <option value="media">Media / Publisher</option>
+                    <option value="individual">Individual</option>
+                    <option value="other">Other</option>
+                  </select>
+                </div>
+                <div className="flex flex-col gap-1.5">
+                  <label className="text-sm font-medium text-[#1a1f2e]">
+                    Subject: How may we help you? <span className="text-[#BB3426]">*</span>
+                  </label>
+                  <select
+                    required
+                    className="h-10 rounded-md border border-[#c5cbd8] bg-white px-3 text-sm text-[#1a1f2e] focus:border-[#3E85BD] focus:outline-none focus:ring-2 focus:ring-[#3E85BD]/20"
+                  >
+                    <option value="">Please Select</option>
+                    <option value="distribution">Press Release Distribution</option>
+                    <option value="pricing">Pricing & Plans</option>
+                    <option value="technical">Technical Support</option>
+                    <option value="partnership">Partnership Inquiry</option>
+                    <option value="billing">Billing Question</option>
+                    <option value="other">Other</option>
+                  </select>
+                </div>
+              </div>
+
+              {/* Row 4: Message */}
+              <div className="flex flex-col gap-1.5">
+                <label className="text-sm font-medium text-[#1a1f2e]">
+                  Message / Comment <span className="text-[#BB3426]">*</span>
+                </label>
+                <textarea
+                  required
+                  rows={5}
+                  className="rounded-md border border-[#c5cbd8] bg-white px-3 py-2.5 text-sm text-[#1a1f2e] placeholder:text-[#9aa3bd] focus:border-[#3E85BD] focus:outline-none focus:ring-2 focus:ring-[#3E85BD]/20 resize-none"
+                />
+              </div>
+
+              {/* Submit */}
+              <div className="flex justify-center pt-1">
+                <button
+                  type="submit"
+                  className="inline-flex h-10 items-center justify-center rounded-md bg-[#3E85BD] px-8 text-sm font-semibold text-white shadow-[0_4px_14px_rgba(62,133,189,0.35)] transition hover:bg-[#3576a8]"
+                >
+                  Submit Now
+                </button>
+              </div>
             </form>
           </div>
         </section>

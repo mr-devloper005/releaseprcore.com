@@ -84,7 +84,7 @@ export async function TaskDetailPageOverride({ slug }: { task: TaskKey; slug: st
         <header className="border-b border-[#e2e6ef] bg-white">
           <div className="mx-auto max-w-4xl px-4 py-10 sm:px-6 lg:py-14">
             <p className="text-[11px] font-semibold uppercase tracking-[0.26em] text-[#6B7291]">
-              {String(category)} {published ? `· ${published}` : ''}
+              {String(category)}
             </p>
             <h1 className="mt-4 font-[family-name:var(--font-display)] text-3xl font-semibold leading-[1.15] tracking-[-0.03em] text-[#262E53] sm:text-4xl lg:text-[2.45rem]">
               {post.title}

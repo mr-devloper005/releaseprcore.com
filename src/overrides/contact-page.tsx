@@ -1,7 +1,5 @@
 import { NavbarShell } from '@/components/shared/navbar-shell'
 import { Footer } from '@/components/shared/footer'
-import { SITE_CONFIG } from '@/lib/site-config'
-import Link from 'next/link'
 
 export const CONTACT_PAGE_OVERRIDE_ENABLED = true
 
@@ -27,44 +25,105 @@ export function ContactPageOverride() {
         </section>
 
         <section className="mx-auto max-w-6xl px-4 py-14 sm:px-6">
-          <div className="grid gap-8 lg:grid-cols-[1fr_1.1fr]">
-            <div className="rounded-2xl border border-[#d9dee8] bg-white p-8 shadow-[0_20px_60px_rgba(38,46,83,0.07)]">
-              <h2 className="font-[family-name:var(--font-display)] text-xl font-semibold text-[#262E53]">Direct channels</h2>
-              <p className="mt-3 text-sm leading-relaxed text-[#6B7291]">
-                Prefer email? Use addresses on your domain or the contact form inside the authenticated dashboard when available.
-              </p>
-              <ul className="mt-8 space-y-5 text-sm">
-                <li>
-                  <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-[#6B7291]">Desk</p>
-                  <a className="mt-1 inline-block font-semibold text-[#3E85BD] hover:underline" href={`mailto:desk@${SITE_CONFIG.domain}`}>
-                    desk@{SITE_CONFIG.domain}
-                  </a>
-                </li>
-                <li>
-                  <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-[#6B7291]">Partnerships</p>
-                  <a className="mt-1 inline-block font-semibold text-[#3E85BD] hover:underline" href={`mailto:partners@${SITE_CONFIG.domain}`}>
-                    partners@{SITE_CONFIG.domain}
-                  </a>
-                </li>
-              </ul>
-            </div>
-            <div className="flex flex-col justify-center rounded-2xl border border-dashed border-[#c5cbd8] bg-[#EEEEEE]/60 p-8">
-              <h2 className="font-[family-name:var(--font-display)] text-lg font-semibold text-[#262E53]">Self-serve next steps</h2>
-              <p className="mt-3 text-sm leading-relaxed text-[#4a5366]">
-                Review plans, explore the archive, or open search to see how releases render before you publish.
-              </p>
-              <div className="mt-6 flex flex-wrap gap-3">
-                <Link
-                  href="/pricing"
-                  className="inline-flex rounded-full bg-[#3E85BD] px-5 py-2.5 text-sm font-semibold text-white shadow-lg shadow-[#3E85BD]/25 transition hover:bg-[#3576a8]"
-                >
-                  Pricing
-                </Link>
-                <Link href="/updates" className="inline-flex rounded-full border border-[#262E53]/15 bg-white px-5 py-2.5 text-sm font-semibold text-[#262E53] transition hover:bg-white/90">
-                  Browse releases
-                </Link>
+          <div className="rounded-2xl border border-[#d9dee8] bg-[#f4f5f7] p-7 shadow-[0_4px_24px_rgba(38,46,83,0.07)]">
+            <form className="grid gap-5">
+              {/* Row 1: Contact Name + Phone Number */}
+              <div className="grid gap-4 sm:grid-cols-2">
+                <div className="flex flex-col gap-1.5">
+                  <label className="text-sm font-medium text-[#1a1f2e]">
+                    Contact Name <span className="text-[#BB3426]">*</span>
+                  </label>
+                  <input
+                    type="text"
+                    required
+                    className="h-10 rounded-md border border-[#c5cbd8] bg-white px-3 text-sm text-[#1a1f2e] placeholder:text-[#9aa3bd] focus:border-[#3E85BD] focus:outline-none focus:ring-2 focus:ring-[#3E85BD]/20"
+                  />
+                </div>
+                <div className="flex flex-col gap-1.5">
+                  <label className="text-sm font-medium text-[#1a1f2e]">Phone Number</label>
+                  <input
+                    type="tel"
+                    className="h-10 rounded-md border border-[#c5cbd8] bg-white px-3 text-sm text-[#1a1f2e] placeholder:text-[#9aa3bd] focus:border-[#3E85BD] focus:outline-none focus:ring-2 focus:ring-[#3E85BD]/20"
+                  />
+                </div>
               </div>
-            </div>
+
+              {/* Row 2: Email */}
+              <div className="flex flex-col gap-1.5">
+                <label className="text-sm font-medium text-[#1a1f2e]">
+                  Email <span className="text-[#BB3426]">*</span>
+                </label>
+                <input
+                  type="email"
+                  required
+                  className="h-10 rounded-md border border-[#c5cbd8] bg-white px-3 text-sm text-[#1a1f2e] placeholder:text-[#9aa3bd] focus:border-[#3E85BD] focus:outline-none focus:ring-2 focus:ring-[#3E85BD]/20"
+                />
+              </div>
+
+              {/* Helper text */}
+              <p className="text-sm text-[#6B7291]">Help Us Understand Your Needs A Little More.</p>
+
+              {/* Row 3: Organization type + Subject */}
+              <div className="grid gap-4 sm:grid-cols-2">
+                <div className="flex flex-col gap-1.5">
+                  <label className="text-sm font-medium text-[#1a1f2e]">
+                    What type of organization are you? <span className="text-[#BB3426]">*</span>
+                  </label>
+                  <select
+                    required
+                    className="h-10 rounded-md border border-[#c5cbd8] bg-white px-3 text-sm text-[#1a1f2e] focus:border-[#3E85BD] focus:outline-none focus:ring-2 focus:ring-[#3E85BD]/20"
+                  >
+                    <option value="">Please Select</option>
+                    <option value="agency">Agency / PR Firm</option>
+                    <option value="corporate">Corporate / Enterprise</option>
+                    <option value="startup">Startup</option>
+                    <option value="nonprofit">Non-Profit</option>
+                    <option value="media">Media / Publisher</option>
+                    <option value="individual">Individual</option>
+                    <option value="other">Other</option>
+                  </select>
+                </div>
+                <div className="flex flex-col gap-1.5">
+                  <label className="text-sm font-medium text-[#1a1f2e]">
+                    Subject: How may we help you? <span className="text-[#BB3426]">*</span>
+                  </label>
+                  <select
+                    required
+                    className="h-10 rounded-md border border-[#c5cbd8] bg-white px-3 text-sm text-[#1a1f2e] focus:border-[#3E85BD] focus:outline-none focus:ring-2 focus:ring-[#3E85BD]/20"
+                  >
+                    <option value="">Please Select</option>
+                    <option value="distribution">Press Release Distribution</option>
+                    <option value="pricing">Pricing &amp; Plans</option>
+                    <option value="technical">Technical Support</option>
+                    <option value="partnership">Partnership Inquiry</option>
+                    <option value="billing">Billing Question</option>
+                    <option value="other">Other</option>
+                  </select>
+                </div>
+              </div>
+
+              {/* Row 4: Message */}
+              <div className="flex flex-col gap-1.5">
+                <label className="text-sm font-medium text-[#1a1f2e]">
+                  Message / Comment <span className="text-[#BB3426]">*</span>
+                </label>
+                <textarea
+                  required
+                  rows={5}
+                  className="resize-none rounded-md border border-[#c5cbd8] bg-white px-3 py-2.5 text-sm text-[#1a1f2e] placeholder:text-[#9aa3bd] focus:border-[#3E85BD] focus:outline-none focus:ring-2 focus:ring-[#3E85BD]/20"
+                />
+              </div>
+
+              {/* Submit */}
+              <div className="flex justify-center pt-1">
+                <button
+                  type="submit"
+                  className="inline-flex h-10 items-center justify-center rounded-md bg-[#3E85BD] px-8 text-sm font-semibold text-white shadow-[0_4px_14px_rgba(62,133,189,0.35)] transition hover:bg-[#3576a8]"
+                >
+                  Submit Now
+                </button>
+              </div>
+            </form>
           </div>
         </section>
       </main>
