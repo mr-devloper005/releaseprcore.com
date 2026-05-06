@@ -164,7 +164,7 @@ export async function TaskListPage({ task, category }: { task: TaskKey; category
             <div className="overflow-hidden rounded-[1.35rem] bg-[#262E53] px-6 py-10 text-white sm:px-10">
               <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-[#7BA3C3]">Wire archive</p>
               <h1 className="mt-4 max-w-3xl font-[family-name:var(--font-display)] text-3xl font-semibold tracking-[-0.03em] sm:text-4xl lg:text-[2.65rem]">
-                {taskConfig?.description || 'Press releases'}
+                {taskConfig?.description || 'Press Wire'}
               </h1>
               <p className="mt-4 max-w-2xl text-sm leading-relaxed text-[#c8d0e4]">
                 Browse by category, narrow the publication window, or search the full index—each release opens with the same structured layout journalists expect.
