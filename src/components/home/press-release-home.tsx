@@ -161,12 +161,7 @@ export function PressReleaseHome({ posts }: Props) {
               </div>
               <div className="flex flex-col justify-center p-7 sm:p-10">
                 <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[#6B7291]">
-                  {new Date(lead.publishedAt || Date.now()).toLocaleDateString('en-US', {
-                    month: 'short',
-                    day: 'numeric',
-                    year: 'numeric',
-                  })}{' '}
-                  · {lead.authorName || SITE_CONFIG.name}
+                  {lead.authorName || SITE_CONFIG.name}
                 </p>
                 <h3 className="mt-4 font-[family-name:var(--font-display)] text-2xl font-semibold leading-snug tracking-[-0.02em] text-[#262E53] sm:text-[1.65rem]">
                   {lead.title}
@@ -204,12 +199,7 @@ export function PressReleaseHome({ posts }: Props) {
                   </div>
                   <div className="flex flex-1 flex-col p-5">
                     <p className="text-[10px] font-semibold uppercase tracking-[0.2em] text-[#6B7291]">
-                      {getCategory(post)} ·{' '}
-                      {new Date(post.publishedAt || Date.now()).toLocaleDateString('en-US', {
-                        month: 'short',
-                        day: 'numeric',
-                        year: 'numeric',
-                      })}
+                      {getCategory(post)}
                     </p>
                     <h3 className="mt-3 font-[family-name:var(--font-display)] text-lg font-semibold leading-snug text-[#262E53] group-hover:text-[#3E85BD]">
                       {post.title}
