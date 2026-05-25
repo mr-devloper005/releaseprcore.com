@@ -66,9 +66,9 @@ export default function RegisterPage() {
   const Icon = config.icon
 
   return (
-    <div className={`min-h-screen ${config.shell}`}>
+    <div className={`flex min-h-screen flex-col ${config.shell}`}>
       <NavbarShell />
-      <main className="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8">
+      <main className="mx-auto w-full max-w-7xl flex-1 px-4 py-14 sm:px-6 lg:px-8">
         <section className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-stretch">
           <div className={`rounded-[2rem] p-8 ${config.side}`}>
             <Icon className="h-8 w-8" />
