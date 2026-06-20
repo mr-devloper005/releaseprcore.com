@@ -39,7 +39,7 @@ const columns = [
 export function FooterOverride() {
   return (
     <footer className="border-t border-[#1e2744] bg-[#262E53] text-[#c8d0e4]">
-      <div className="mx-auto max-w-6xl px-4 py-14 sm:px-6">
+      <div className="mx-auto max-w-6xl px-4 py-10 sm:px-6">
         <div className="grid gap-10 md:grid-cols-[1.1fr_2fr]">
           <div>
             <p className="font-[family-name:var(--font-display)] text-xl font-semibold text-white">{SITE_CONFIG.name}</p>
@@ -62,7 +62,7 @@ export function FooterOverride() {
             ))}
           </div>
         </div>
-        <div className="mt-12 flex flex-col gap-4 border-t border-white/10 pt-8 text-xs text-[#8b93ab] sm:flex-row sm:items-center sm:justify-between">
+        <div className="mt-8 flex flex-col gap-2 border-t border-white/10 pt-5 text-xs text-[#8b93ab] sm:flex-row sm:items-center sm:justify-between">
           <p>
             &copy; {new Date().getFullYear()} {SITE_CONFIG.name}. All rights reserved.
           </p>
